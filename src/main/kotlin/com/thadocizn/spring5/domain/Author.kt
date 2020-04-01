@@ -4,13 +4,13 @@ import javax.persistence.*
 
 @Entity
 data class Author(
+       val firstName: String,
+       val lastName: String
+
+){
        @Id
        @GeneratedValue(strategy = GenerationType.AUTO)
-       val id: Long,
-       val firstName: String,
-       val lastName: String,
+       val id: Long = 0
        @ManyToMany(mappedBy = "authors")
-       val books:Set<Book>
-){
-
+       var books:MutableSet<Book> = HashSet<Book>()
 }
