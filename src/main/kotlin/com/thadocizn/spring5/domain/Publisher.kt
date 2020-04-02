@@ -10,7 +10,7 @@ import javax.persistence.*
 @Entity
 data class Publisher (
 
-
+    var name: String = "",
     var address: String = "",
     var city: String = "",
     var state: String = "",

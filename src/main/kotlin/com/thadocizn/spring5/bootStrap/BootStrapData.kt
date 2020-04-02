@@ -19,6 +19,7 @@ class BootStrapData(
     override fun run(vararg args: String?) {
 
         val publish = Publisher()
+        publish.name = "ThaDocIzN"
         publish.address = "7310"
         publish.city = "Magnolia"
         publish.state = "Ark"
