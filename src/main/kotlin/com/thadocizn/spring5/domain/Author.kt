@@ -11,6 +11,7 @@ data class Author(
        @Id
        @GeneratedValue(strategy = GenerationType.AUTO)
        val id: Long = 0
+
        @ManyToMany(mappedBy = "authors")
        var books:MutableSet<Book> = HashSet<Book>()
 }
